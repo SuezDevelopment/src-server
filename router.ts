@@ -41,33 +41,33 @@ const ws = cc.createWs
 
 // User routes
 router
-    .post("/auth/signin", signIn)
-    .post("/auth/signup", signUp)
-    .get("/users",  getUsers)
-    .post("/user/:id",  getUser)
-    .put("/user/update",  updateUserById)
-    .get("/user/:id",  getUser)
-    .get('/user', currentUser)
-    .get('/user/announcements', currentUser)
+    .POST("/auth/signin", signIn)
+    .POST("/auth/signup", signUp)
+    .GET("/users",  getUsers)
+    .POST("/user/:id",  getUser)
+    .PUT("/user/update",  updateUserById)
+    .GET("/user/:id",  getUser)
+    .GET('/user', currentUser)
+    .GET('/user/announcements', currentUser)
 
 
 router
-    .post("/community/new", newCommunity)
-    .post("/community/:id", getCommunityByID)
-    .get("/communities", getCommunity)
-    .post("/community/sendchat", newCommunityChat)
-    .post("/ws", ws)
-    .get('/', (context: { response: { body: string; }; }) => {
+    .POST("/community/new", newCommunity)
+    .POST("/community/:id", getCommunityByID)
+    .GET("/communities", getCommunity)
+    .POST("/community/sendchat", newCommunityChat)
+    .POST("/ws", ws)
+    .GET('/', (context: { response: { body: string; }; }) => {
         context.response.body = 'Server is listerning on 3000';
     });
 
 
     //admin requests
 router
-    .post()
+    .POST()
 
 // router
-//     .get("user/:username",authourized, getUserByusername)
+//     .GET("user/:username",authourized, getUserByusername)
 //     .patch("user/:id",authourized, updateUserById)
    
 export default router
