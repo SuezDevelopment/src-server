@@ -1,9 +1,9 @@
 import { Router } from "./deps.ts";
-import {UserController} from '../controller/user.ts'
+import {UserController} from './controller/user.ts'
 // import {ElectionController} from '../../controller/election.ts'
-import {CommunityController} from '../controller/community.ts'
-import { authourized } from "../middleware/isAuth.ts";
-import { AdminController } from "../controller/admin.ts";
+import {CommunityController} from './controller/community.ts'
+import { authourized } from "./middleware/isAuth.ts";
+import { AdminController } from "./controller/admin.ts";
 
 const router = new Router();
 const us = new UserController

@@ -2,7 +2,7 @@ import { isWebSocketCloseEvent, WebSocket } from "https://deno.land/std@0.92.0/w
 import { RouterContext, ObjectId, getQuery, WebSocketClient, StandardWebSocketClient, v4 } from "../deps.ts";
 import {channelEvents, Community} from '../schema/community.ts'
 import {Message, MessageSchema} from '../schema/message.ts'
-import { pt } from "../src/index.ts";
+import { pt } from "../index.ts";
 
 let path: any | undefined
 
