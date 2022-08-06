@@ -1,5 +1,5 @@
 import { ObjectId, Collection } from "../deps.ts";
-import {db} from '../server/utils/db.ts'
+import {db} from '../utils/db.ts'
 
 export interface CommunitySchama {
   _id: ObjectId;
