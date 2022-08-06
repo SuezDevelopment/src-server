@@ -17,13 +17,13 @@ wss.on("connection", async (ws: WebSocketClient)=>{
 
 
 
-app.use(async (ctx, next) => {
+app.use(async (ctx: { response: { headers: { get: (arg0: string) => any; }; }; request: { method: any; url: any; }; }, next: () => any) => {
   await next();
   const rt = ctx.response.headers.get("X-Response-Time");
   console.log(`${ctx.request.method} ${ctx.request.url} - ${rt}`);
 });
 
-app.use(async (ctx, next) => {
+app.use(async (ctx: { response: { headers: { set: (arg0: string, arg1: string) => void; }; }; }, next: () => any) => {
   const start = Date.now();
   await next();
   const ms = Date.now() - start;

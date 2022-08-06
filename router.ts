@@ -57,6 +57,9 @@ router
     .get("/communities", getCommunity)
     .post("/community/sendchat", newCommunityChat)
     .post("/ws", ws)
+    .get('/', (context: { response: { body: string; }; }) => {
+        context.response.body = 'Server is listerning on 3000';
+    });
 
 
     //admin requests
