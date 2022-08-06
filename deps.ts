@@ -35,5 +35,3 @@ export {
 
 export { create, verify } from "https://deno.land/x/djwt@v2.4/mod.ts";
  
-import { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
-export const { DATA_API_KEY, APP_ID } = config();
