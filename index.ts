@@ -8,6 +8,8 @@ const port = 4343;
 export const pt = 4303;
 const app = new Application();
 export const wss = new WebSocketServer(pt);
+
+
 wss.on("connection", async (ws: WebSocketClient)=>{
   ws.on("message", function (message: any) {
     console.log(message);
@@ -48,4 +50,4 @@ app.addEventListener("listen", ({ hostname, port, serverType }:any) => {
     console.log(bold("  using HTTP server: " + yellow(serverType)));
 });
 await app.listen({ hostname: "127.0.0.1", port: port });
-console.log(bold("Finished."));
+console.log(bold("Finished.")||'finshed');
