@@ -1,4 +1,4 @@
-import { Application, serve, WebSocketServer, StandardWebSocketClient, WebSocketClient } from "../deps.ts";
+import { Application, serve, WebSocketServer, StandardWebSocketClient, WebSocketClient } from "./deps.ts";
 import router from "./router.ts";
 import {
     bold,
