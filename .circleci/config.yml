@@ -12,9 +12,6 @@ jobs:
       - checkout
       - run: |
           deno run --allow-net --allow-env --allow-read --allow-write index.ts --port=${PORT}
-      - cache dependencies
-      - run: |
-          deno cache deps.ts
 
 workflows:
   sample:
